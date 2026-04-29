@@ -1,12 +1,45 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Galenite Test Animate</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galenite Test Animate</title>
+  <style>
+    *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f5f2;color:#0b0b0b}button,input{font:inherit}.page{min-height:100vh;position:relative;overflow:hidden;background:radial-gradient(circle at 25% 10%,#fff 0,#f3f3ef 34%,#e7e7e1 100%)}.page:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#111 1px,transparent 1px),linear-gradient(90deg,#111 1px,transparent 1px);background-size:72px 72px;opacity:.035;mask-image:radial-gradient(circle at 50% 45%,#000,transparent 72%)}.page:after{content:"";position:absolute;inset:0;opacity:.055;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 280 280' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}.orb{position:absolute;border:1px solid #1112;border-radius:999px;filter:blur(.2px);animation:pulse 7s infinite}.o1{width:640px;height:640px;left:-220px;top:-230px;background:radial-gradient(circle,#fff,#00000008 65%,transparent)}.o2{width:420px;height:420px;right:-130px;bottom:-140px;background:radial-gradient(circle,#fff,#00000006 65%,transparent);animation-delay:1.4s}@keyframes pulse{50%{transform:scale(1.12);opacity:.55}}.top{position:relative;z-index:2;padding:28px 38px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:#1119}.auth{position:relative;z-index:2;min-height:calc(100vh - 82px);display:grid;grid-template-columns:minmax(320px,540px) 260px;gap:34px;align-items:center;justify-content:center;padding:40px 24px 90px}.card,.side,.panel,.chat{border:1px solid #111;background:#fffffff0;box-shadow:0 34px 100px #00000014;backdrop-filter:blur(18px)}.card{padding:36px;border-radius:36px;animation:rise .75s ease both}.avatar{width:116px;height:116px;margin:0 auto 26px;border:1px solid #111;border-radius:38px;display:grid;place-items:center;background:linear-gradient(145deg,#fff,#e8e8e2);box-shadow:14px 14px 0 #111;animation:float 4s ease-in-out infinite}.avatar svg{width:42px;height:42px}.eyebrow{margin:0 0 12px;text-align:center;font-size:12px;text-transform:uppercase;letter-spacing:.25em;color:#777}.card h1{margin:0;text-align:center;font-size:clamp(36px,5vw,58px);line-height:.92;letter-spacing:-.06em}.card p{margin:18px auto 0;max-width:410px;text-align:center;color:#626262;line-height:1.55}.form{margin-top:30px;display:grid;gap:14px}.form span{display:block;margin:0 0 8px;font-size:13px;color:#555}.input{height:58px;border:1px solid #111;border-radius:999px;background:#fff;display:flex;align-items:center;gap:10px;padding:0 8px 0 18px;box-shadow:0 12px 40px #0000000d}.input input{border:0;outline:0;background:transparent;flex:1;min-width:0}.round,.send{border:0;border-radius:999px;width:44px;height:44px;display:grid;place-items:center;background:#111;color:#fff;cursor:pointer}.btn{height:56px;border-radius:999px;border:1px solid #111;background:#111;color:#fff;cursor:pointer;transition:.2s}.btn:hover,.round:hover,.send:hover{transform:translateY(-2px);box-shadow:0 18px 30px #0002}.error{display:none;margin:0!important;color:#111!important;background:#f0f0ec;border:1px solid #1112;padding:12px 14px;border-radius:18px;font-size:14px}.sideStack{display:grid;gap:14px;animation:rise .75s .18s ease both}.side{height:92px;border-radius:28px;padding:20px;display:grid;align-content:center;gap:8px}.side b{font-size:12px;color:#777}.side span{text-transform:uppercase;letter-spacing:.14em;font-size:13px}.ai{position:relative;z-index:2;display:grid;grid-template-columns:330px minmax(360px,780px);gap:24px;justify-content:center;padding:42px 24px 70px}.panel,.chat{border-radius:34px}.panel{padding:28px;height:max-content;animation:rise .7s ease both}.logo{width:72px;height:72px;border-radius:24px;background:#111;color:#fff;display:grid;place-items:center;margin-bottom:22px}.panel h2{font-size:34px;line-height:1;margin:0 0 14px;letter-spacing:-.045em}.panel p{text-align:left;margin:0 0 22px;color:#646464;line-height:1.55}.metric{height:48px;border:1px solid #1111;background:#f4f4f0;border-radius:18px;display:flex;align-items:center;gap:10px;padding:0 14px;margin-top:10px;color:#333}.chat{height:72vh;min-height:560px;display:grid;grid-template-rows:auto 1fr auto;overflow:hidden;animation:rise .7s .1s ease both}.chatTop{height:62px;border-bottom:1px solid #111;display:flex;align-items:center;gap:12px;padding:0 20px}.dots{width:12px;height:12px;border-radius:50%;background:#111;box-shadow:20px 0 #ccc,40px 0 #eee}.chatTop b{margin-left:48px}.chatTop em{margin-left:auto;font-style:normal;font-size:12px;text-transform:uppercase;letter-spacing:.16em;color:#777}.messages{padding:24px;overflow:auto;display:flex;flex-direction:column;gap:12px}.msg{max-width:76%;padding:14px 16px;border-radius:22px;line-height:1.45;border:1px solid #111;animation:msg .25s ease both}.bot{align-self:flex-start;background:#fff}.user{align-self:flex-end;background:#111;color:#fff}.composer{margin:0 18px 18px;border:1px solid #111;border-radius:999px;background:#fff;display:flex;gap:10px;padding:8px}.composer input{border:0;outline:0;background:transparent;flex:1;padding:0 12px}.hidden{display:none!important}@keyframes rise{from{opacity:0;transform:translateY(34px);filter:blur(10px)}to{opacity:1;transform:none;filter:blur(0)}}@keyframes float{50%{transform:translateY(-8px) rotate(-2deg)}}@keyframes msg{from{opacity:0;transform:translateY(10px) scale(.98)}}@media(max-width:820px){.auth,.ai{grid-template-columns:1fr}.sideStack,.panel{display:none}.card{padding:24px}.chat{height:calc(100vh - 130px);min-height:480px}.top{padding:20px}.msg{max-width:90%}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="orb o1"></div><div class="orb o2"></div>
+    <header class="top"><span>GALENITE</span><span id="routeLabel">AUTH GATE</span></header>
+
+    <section id="auth" class="auth">
+      <div class="card">
+        <div class="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2l1.9 6.1L20 10l-6.1 1.9L12 18l-1.9-6.1L4 10l6.1-1.9L12 2z"/><path d="M19 16l.9 2.6L22 19l-2.1.4L19 22l-.9-2.6L16 19l2.1-.4L19 16z"/></svg></div>
+        <p class="eyebrow">private access</p>
+        <h1>Вход в тестовый интерфейс</h1>
+        <p>Минимальная авторизация в стиле Galenite: белая база, черные акценты, мягкие анимации и ощущение продукта.</p>
+        <form class="form" id="form"><label><span>Пароль</span><div class="input"><input id="pass" type="password" placeholder="Введите пароль" autocomplete="current-password"><button class="round" type="submit">→</button></div></label><p id="err" class="error">Пароль не тот. Тестовый ключ: galenite</p><button class="btn" type="submit">Войти</button></form>
+      </div>
+      <div class="sideStack"><div class="side"><b>01</b><span>white core</span></div><div class="side"><b>02</b><span>motion first</span></div><div class="side"><b>03</b><span>ai preview</span></div></div>
+    </section>
+
+    <section id="ai" class="ai hidden">
+      <aside class="panel"><div class="logo">AI</div><h2>AI Office Core</h2><p>Пока без реального API. Здесь проверяется дизайн, ритм, чат и поведение интерфейса.</p><div class="metric">Auth: local test</div><div class="metric">Route: /ai</div><div class="metric">Model: mock</div><button class="btn" id="logout" style="margin-top:18px;width:100%">Выйти</button></aside>
+      <section class="chat"><div class="chatTop"><span class="dots"></span><b>Galenite Chat</b><em>online</em></div><div class="messages" id="messages"><div class="msg bot">Привет. Это тестовый AI-интерфейс Galenite. Напиши что-нибудь.</div></div><form class="composer" id="chatForm"><input id="msg" placeholder="Напиши запрос..."><button class="send" type="submit">→</button></form></section>
+    </section>
+  </main>
+  <script>
+    const BASE='/test-animate';
+    const replies=['Галенит на связи. Я бы начал с чистого интерфейса, а потом уже подключал реальную модель.','Принял запрос. Сейчас это демо, но визуально уже можно тестировать поведение чата.','Логика простая: запрос → мягкая анимация → ответ. Дальше сюда легко повесить API.'];
+    let idx=0;
+    function path(){ return location.pathname.replace(BASE,'') || '/auth'; }
+    function go(p){ history.pushState({},'',BASE+p); render(); }
+    function render(){ const p=path(); const authed=localStorage.getItem('glnt-auth')==='true'; if(p==='/ai'&&!authed){go('/auth');return} document.getElementById('auth').classList.toggle('hidden',p==='/ai'); document.getElementById('ai').classList.toggle('hidden',p!=='/ai'); document.getElementById('routeLabel').textContent=p==='/ai'?'AI INTERFACE':'AUTH GATE'; }
+    document.getElementById('form').onsubmit=e=>{e.preventDefault(); if(document.getElementById('pass').value==='galenite'){localStorage.setItem('glnt-auth','true');go('/ai')}else{document.getElementById('err').style.display='block'}};
+    document.getElementById('logout').onclick=()=>{localStorage.removeItem('glnt-auth');go('/auth')};
+    document.getElementById('chatForm').onsubmit=e=>{e.preventDefault(); const input=document.getElementById('msg'); const text=input.value.trim(); if(!text)return; input.value=''; const box=document.getElementById('messages'); box.insertAdjacentHTML('beforeend',`<div class="msg user"></div>`); box.lastChild.textContent=text; setTimeout(()=>{box.insertAdjacentHTML('beforeend',`<div class="msg bot"></div>`); box.lastChild.textContent=replies[idx++%replies.length]; box.scrollTop=box.scrollHeight},520); box.scrollTop=box.scrollHeight};
+    addEventListener('popstate',render); render();
+  </script>
+</body>
 </html>
